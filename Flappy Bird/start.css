@@ -1,0 +1,205 @@
+body {
+    display: flex; 
+    justify-content: center;
+     align-items: center; 
+     height: 100vh;
+      margin: 0; 
+      background: url(background-img.png) no-repeat center center fixed;
+      flex-direction: column;
+  }
+  .title{
+    font-family: "Grape Nuts", serif;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0 0 20px 0; 
+    font-size: 4em; 
+    color: #040404;
+  }
+  /*#myBtn{
+    padding: 10px 20px; 
+    font-size: 1em; 
+    cursor: pointer;
+  }*/
+  #myBtn{
+    padding: 10px 20px; 
+    font-size: 1em; 
+    cursor: pointer;
+    width: 150px;
+    height: 55px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(0, 160, 255);
+  color: #fff;
+  box-shadow:
+    0px 10px 10px rgb(0, 150, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(0, 150, 252) inset;
+    cursor: pointer;
+  }
+  #myBtn::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+  #myBtn::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+  #myBtn:hover {
+    animation: jello-horizontal 0.9s both;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  
+  #myStart{
+    padding: 10px 20px; 
+    font-size: 1em; 
+    cursor: pointer;
+    width: 150px;
+    height: 55px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(0, 160, 255);
+  color: #fff;
+  box-shadow:
+    0px 10px 10px rgb(0, 150, 253) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(0, 150, 252) inset;
+    cursor: pointer;
+  }
+  #myStart::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+  #myStart::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+  #myStart:hover {
+    animation: jello-horizontal 0.9s both;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
