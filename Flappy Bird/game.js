@@ -1,15 +1,12 @@
-let move_speed = 2, gravity = 0.3;
+let move_speed = 1; // Ajustează valoarea pentru a reduce viteza
+let gravity = 0.1; // Ajustează valoarea pentru a reduce gravitatea
 let bird = document.querySelector('.bird');
 let img = document.getElementById('bird-1');
 let sound_point = new Audio('sounds effect/point.mp3');
 let sound_die = new Audio('sounds effect/die.mp3');
 
-// getting bird element properties
 let bird_props = bird.getBoundingClientRect();
-
-// This method returns DOMReact -> top, right, bottom, left, x, y, width and height
 let background = document.querySelector('.background').getBoundingClientRect();
-
 let score_val = document.querySelector('.score_val');
 let message = document.querySelector('.message');
 let score_title = document.querySelector('.score_title');
@@ -19,7 +16,6 @@ img.style.display = 'none';
 message.classList.add('messageStyle');
 
 document.addEventListener('keydown', (e) => {
-    
     if(e.key == 'Enter' && game_state != 'Play'){
         document.querySelectorAll('.pipe_sprite').forEach((e) => {
             e.remove();
@@ -72,18 +68,16 @@ function play(){
         if(game_state != 'Play') return;
         bird_dy = bird_dy + gravity;
 
-        // Cod adăugat pentru click pe stânga
         document.addEventListener('mousedown', function(event) {
-            if (event.button === 0) {  // 0 reprezintă butonul stânga al mouse-ului
-                bird_dy = -7.6;  // Face pasărea să zboare în sus
+            if (event.button === 0) {
+                bird_dy = -5; // Ajustează valoarea pentru a face mișcările mai line
             }
         });
 
-        //Cod adaugat pt arrow up
         document.addEventListener('keydown', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
                 img.src = 'bird.png';
-                bird_dy = -7.6;
+                bird_dy = -5; // Ajustează valoarea pentru a face mișcările mai line
             }
         });
 
@@ -107,8 +101,7 @@ function play(){
     requestAnimationFrame(apply_gravity);
 
     let pipe_seperation = 0;
-
-    let pipe_gap = 35;
+    let pipe_gap = 50; // Crește valoarea pentru a mări distanța dintre obstacole
 
     function create_pipe(){
         if(game_state != 'Play') return;
